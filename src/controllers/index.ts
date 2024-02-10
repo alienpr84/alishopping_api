@@ -1,0 +1,1 @@
+export { default as sectionsController } from './sections.controller';
