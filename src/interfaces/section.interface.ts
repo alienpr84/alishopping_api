@@ -1,7 +1,7 @@
 import { ObjectId } from 'mongodb';
 
 interface Section {
-  _id?: ObjectId;
+  _id?: ObjectId | string;
   name: string;
 }
 

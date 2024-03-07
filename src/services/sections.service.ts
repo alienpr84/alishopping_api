@@ -1,14 +1,18 @@
 import { Section } from '../interfaces';
-import databaseMockdata from '../../mock/mock-utils';
 
 class SectionsService {
   getAll(): Section[] {
     try {
-      return databaseMockdata.getSections();
+      return [
+        { name: 'Beverages', _id: 'abde' },
+        { name: 'Snacks', _id: 'abde' },
+        { name: 'Dairy', _id: 'abde' },
+        { name: 'Meat', _id: 'abde' },
+      ];
     } catch (error) {
       throw error;
     }
   }
 }
 
-export default Object.freeze(new SectionsService());
+export default new SectionsService();

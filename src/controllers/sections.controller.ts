@@ -1,8 +1,15 @@
 import { Request, Response } from 'express';
+import sectionsService from '../services/sections.service';
+import { Section } from '../interfaces';
 
 class SectionsController {
-  getAll(req: Request, res: Response) {
-
+  getAll(_:Request, res: Response) {
+    try {
+      const result: Section[] = sectionsService.getAll();
+      res.status(200).json(result)
+    } catch (error) {
+      console.log(error);
+    }
   }
 }
 
