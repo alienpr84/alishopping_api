@@ -1,4 +1,4 @@
-import { sum } from '../src/utils';
+import { sum } from '../../src/utils';
 
 describe('Sum method', () => {
   const numberArr: number[] = [1, 2, 3, 4, 5];
